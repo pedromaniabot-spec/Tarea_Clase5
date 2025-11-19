@@ -1,4 +1,4 @@
-emailjs.init("AQUI VA EL CÓDGIO DE LA API"); 
+emailjs.init("RjXuBtbJ6snoDHk4I"); 
 
 document.getElementById('personalDataForm').addEventListener('submit', function(event) {
   event.preventDefault();
