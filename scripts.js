@@ -9,7 +9,7 @@ document.getElementById('personalDataForm').addEventListener('submit', function(
   const phone = document.getElementById('phone').value;
   const message = document.getElementById('message').value;
 
-  emailjs.send("CODIGO DEL SERVICIO", "CODIGO DE LA PLANTILLA", {
+  emailjs.send("service_8qy7a0c","template_00tmv4w", {
     firstName: firstName,
     lastName: lastName,
     email: email,
