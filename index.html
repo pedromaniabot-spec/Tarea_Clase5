@@ -1,50 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos Personales</title>
-    <link rel="stylesheet" href="estilos.css">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-</head>
+<meta charset="UTF-8">
+<title>Ejercicio 6 - Formularios</title>
 
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background: #eef3ff;
+        margin:0;
+        padding:0;
+        text-align:center;
+    }
+    h1{
+        background:#3b82f6;
+        color:white;
+        padding:15px 0;
+        margin:0;
+    }
+    .botones{
+        margin-top:40px;
+    }
+    .btn{
+        display:inline-block;
+        background:#ffffff;
+        padding:15px 25px;
+        margin:15px;
+        border-radius:10px;
+        font-size:18px;
+        text-decoration:none;
+        color:#3b82f6;
+        border:2px solid #3b82f6;
+        transition:0.3s;
+    }
+    .btn:hover{
+        background:#3b82f6;
+        color:white;
+        transform:scale(1.05);
+    }
+    img{
+        margin-top:30px;
+        width:220px;
+        border-radius:10px;
+    }
+</style>
+
+</head>
 <body>
 
-    <!-- ====== BOTONES DE NAVEGACIÓN ====== -->
-    <div class="nav-buttons">
-        <button onclick="window.location.href='index.html'">INICIO</button>
-        <button onclick="window.location.href='index.html#formulario'">Formulario de Datos Personales</button>
-        <button onclick="window.location.href='encuesta.html'">Formulario de Encuesta</button>
-    </div>
+<h1>Página Principal</h1>
 
-    <div class="form-container" id="formulario">
-        <h1>Datos Personales</h1>
-        <form id="personalDataForm">
-            <label for="firstName">Nombre:</label>
-            <input type="text" id="firstName" name="firstName" placeholder="Ingresa tu nombre" required>
+<div class="botones">
+    <a class="btn" href="datos.html">Formulario de Datos Personales</a>
+    <a class="btn" href="encuesta.html">Formulario de Encuesta</a>
+</div>
 
-            <label for="lastName">Apellido:</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Ingresa tu apellido" required>
+<img src="https://i.imgur.com/8Km9tLL.png" alt="Imagen">
 
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
-
-            <label for="phone">Teléfono:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Ingresa tu número de teléfono">
-
-            <label for="address">MENSAJE:</label>
-            <input type="text" id="message" name="message" placeholder="Ingresa tu Mensaje">
-
-            <button type="submit">Guardar</button>
-        </form>
-        <p id="status-message"></p>
-    </div>
-
-    <script src="script.js" defer></script>
 </body>
-
 </html>
+
+
 
 
 
