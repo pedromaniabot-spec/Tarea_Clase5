@@ -1,4 +1,4 @@
-emailjs.init("RjXuBtbJ6snoDHk4I"); 
+emailjs.init("jprzx1rbCSdnXRl7X"); 
 
 document.getElementById('personalDataForm').addEventListener('submit', function(event) {
   event.preventDefault();
