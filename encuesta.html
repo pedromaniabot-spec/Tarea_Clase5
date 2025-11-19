@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Formulario de Encuesta</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#fdf2f8;
+        padding:20px;
+    }
+    h1{
+        text-align:center;
+        background:#ec4899;
+        color:white;
+        padding:12px;
+        border-radius:8px;
+    }
+    form{
+        background:white;
+        padding:20px;
+        border-radius:10px;
+        max-width:450px;
+        margin:auto;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+    label{ font-weight:bold; }
+    select, textarea{
+        width:100%;
+        padding:10px;
+        border-radius:6px;
+        border:1px solid #ccc;
+        margin-bottom:15px;
+    }
+    input[type=checkbox]{ margin-right:5px; }
+    .btn{
+        background:#ec4899;
+        color:white;
+        padding:10px 18px;
+        border:none;
+        border-radius:6px;
+        cursor:pointer;
+        transition:0.3s;
+    }
+    .btn:hover{
+        background:#db2777;
+    }
+    .nav{
+        text-align:center;
+        margin-bottom:15px;
+    }
+    .nav a{
+        text-decoration:none;
+        padding:8px 15px;
+        background:white;
+        border-radius:6px;
+        margin:5px;
+        border:1px solid #ec4899;
+        color:#ec4899;
+    }
+</style>
+
+</head>
+<body>
+
+<h1>Encuesta</h1>
+
+<div class="nav">
+    <a href="index.html">Inicio</a>
+    <a href="datos.html">Ir a Datos</a>
+</div>
+
+<form id="formEncuesta">
+
+    <label>Gustos musicales:</label>
+    <select id="musical">
+        <option>Pop</option>
+        <option>Rock</option>
+        <option>Reggaeton</option>
+        <option>Electrónica</option>
+        <option>Otro</option>
+    </select>
+
+    <label>Gustos deportivos:</label><br>
+    <input type="checkbox" value="Fútbol"> Fútbol<br>
+    <input type="checkbox" value="Básquet"> Básquet<br>
+    <input type="checkbox" value="Tenis"> Tenis<br>
+    <input type="checkbox" value="Natación"> Natación<br><br>
+
+    <label>Nivel de estudios:</label>
+    <select id="estudios">
+        <option>Primario</option>
+        <option>Secundario</option>
+        <option>Terciario</option>
+        <option>Universitario</option>
+    </select>
+
+    <label>Situación laboral:</label>
+    <select id="laboral">
+        <option>Estudia</option>
+        <option>Trabaja</option>
+        <option>Trabaja y estudia</option>
+        <option>Desempleado</option>
+    </select>
+
+    <label>Comentarios:</label>
+    <textarea id="comentarios" rows="4"></textarea>
+
+    <button class="btn" type="submit">Enviar Encuesta</button>
+</form>
+
+<div id="resultado"></div>
+
+<script>
+document.getElementById("formEncuesta").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let deportes = [];
+    document.querySelectorAll("input[type=checkbox]:checked")
+        .forEach(chk => deportes.push(chk.value));
+
+    document.getElementById("resultado").innerHTML =
+        "<h3>Resultados:</h3>" +
+        "<p><strong>Música:</strong> " + musical.value + "</p>" +
+        "<p><strong>Deportes:</strong> " + (deportes.length ? deportes.join(", ") : "Ninguno") + "</p>" +
+        "<p><strong>Estudios:</strong> " + estudios.value + "</p>" +
+        "<p><strong>Laboral:</strong> " + laboral.value + "</p>" +
+        "<p><strong>Comentarios:</strong> " + comentarios.value + "</p>";
+});
+</script>
+
+</body>
+</html>
 
