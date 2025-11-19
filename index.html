@@ -7,11 +7,18 @@
     <title>Datos Personales</title>
     <link rel="stylesheet" href="estilos.css">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
 </head>
 
 <body>
-    <div class="form-container">
+
+    <!-- ====== BOTONES DE NAVEGACIÓN ====== -->
+    <div class="nav-buttons">
+        <button onclick="window.location.href='index.html'">INICIO</button>
+        <button onclick="window.location.href='index.html#formulario'">Formulario de Datos Personales</button>
+        <button onclick="window.location.href='encuesta.html'">Formulario de Encuesta</button>
+    </div>
+
+    <div class="form-container" id="formulario">
         <h1>Datos Personales</h1>
         <form id="personalDataForm">
             <label for="firstName">Nombre:</label>
@@ -33,9 +40,11 @@
         </form>
         <p id="status-message"></p>
     </div>
-    
-</body>
+
     <script src="script.js" defer></script>
+</body>
 
 </html>
+
+
 
